@@ -5,13 +5,11 @@ import { Box } from '@chakra-ui/react'
 
 const Layout = ({ children }) => {
     return (<>
-
         <Head>
-
             <title>Real Estate</title>
 
         </Head>
-        <Box>
+        <Box maxWidth="1280px" m="auto">
             <header>
                 <Navbar />
             </header>
