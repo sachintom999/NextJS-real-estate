@@ -36,6 +36,7 @@ const Property = ({
             src={coverPhoto ? coverPhoto?.url : DefaultImage}
             width={"400"}
             height={"300"}
+            alt="property-pic"
           />
         </Box>
         <Box w="full">
@@ -71,7 +72,7 @@ const Property = ({
             <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
           </Flex>
           <Text fontSize={"lg"}>
-            {title.length > 30 ? title.substring(0, 30) + "..." : title}
+            {title?.length > 30 ? title.substring(0, 30) + "..." : title}
           </Text>
         </Box>
       </Flex>

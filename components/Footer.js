@@ -8,12 +8,12 @@ const Footer = () => {
       left={"0%"}
       w="full"
       textAlign={"center"}
-      p="5"
+      p="2"
       borderTop={"1px"}
       borderColor={"gray.100"}
       bgColor={"gray.200"}
     >
-      © 2021 Realtor, Inc.
+      © 2023 DreamListings Inc.
     </Box>
   )
 }

@@ -1,5 +1,4 @@
 import { Box, Flex, Icon, Text } from "@chakra-ui/react"
-// import Image from "next/image"
 import { useRouter } from "next/router"
 import { useState } from "react"
 import { BsFilter } from "react-icons/bs"
@@ -7,7 +6,6 @@ import { BsFilter } from "react-icons/bs"
 import Property from "../components/Property"
 import SearchFilter from "../components/SearchFilter"
 import { fetchApi } from "../utils/fetchApi"
-// import NoResult from "../assets/images/noresult.svg"
 
 const Search = ({ properties }) => {
   const [showFilters, setShowFilters] = useState(false)
@@ -37,8 +35,18 @@ const Search = ({ properties }) => {
         />
       </Flex>
       {showFilters && <SearchFilter />}
-      <Text fontSize={"2xl"} fontWeight={"bold"} marginTop={"10px"}>
-        Properties {router.query.purpose}
+      <Text
+        fontSize={"2xl"}
+        fontWeight={"bold"}
+        marginTop={"25px"}
+        marginBottom={"25px"}
+      >
+        Properties{" "}
+        {router.query.purpose
+          ? router.query.purpose === "for-rent"
+            ? "for Rent"
+            : "for Sale"
+          : ""}
       </Text>
       <Flex flexWrap={"wrap"}>
         {properties?.map((property) => {

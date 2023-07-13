@@ -1,10 +1,11 @@
 const axios = require("axios")
-
-import { listdata as data } from "./data"
-
 const baseUrl = `https://bayut.p.rapidapi.com`
 
-export const fetchApi = async (endpoint, params) => {
+export const fetchApi = async (
+  endpoint,
+  params,
+  key = process.env.NEXT_PUBLIC_RAPID_API_KEY
+) => {
   const url = `${baseUrl}${endpoint}`
 
   const options = {
@@ -12,15 +13,15 @@ export const fetchApi = async (endpoint, params) => {
     url,
     params,
     headers: {
-      "X-RapidAPI-Key": process.env.RAPID_API_KEY,
+      "X-RapidAPI-Key": key,
       "X-RapidAPI-Host": "bayut.p.rapidapi.com",
     },
   }
 
   try {
-    // const { data } = await axios.request(options)
+    const response = await axios.request(options)
 
-    return data
+    return response.data
   } catch (error) {
     console.error(error)
   }

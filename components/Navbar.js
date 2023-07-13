@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <Flex p="2" borderBottom={"1px"} borderColor={"gray.100"}>
       <Box fontSize={"3xl"} fontWeight={"bold"} color={"blue.400"}>
-        <Link href="/">Realtor</Link>
+        <Link href="/">DreamListings</Link>
       </Box>
       <Spacer />
       <Box>

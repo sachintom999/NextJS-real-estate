@@ -61,6 +61,7 @@ const Banner = ({
           height={600}
           src={imgUrl}
           className="object-contain"
+          alt="property-pic"
         />
       </Box>
       <Box p="4" marginLeft={"4"}>
@@ -99,8 +100,16 @@ export async function getStaticProps() {
     hitsPerPage: "25",
   }
 
-  const { hits: propertiesForRent } = await fetchApi(url, forRentParams)
-  const { hits: propertiesForSale } = await fetchApi(url, forSaleParams)
+  const { hits: propertiesForRent } = await fetchApi(
+    url,
+    forRentParams,
+    process.env.RAPID_API_KEY
+  )
+  const { hits: propertiesForSale } = await fetchApi(
+    url,
+    forSaleParams,
+    process.env.RAPID_API_KEY
+  )
 
   return {
     props: {
