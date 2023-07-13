@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Real Estate Listings Website
 
-## Getting Started
+This is a real estate listings website built using Next.js 13, Chakra UI, and the Bayut API from RapidAPI.
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+This project is a web application that allows users to search for real estate listings. It fetches data from the Bayut API, which provides a wide range of real estate listings including apartments, villas, and commercial properties. The website is built using Next.js, a React framework for server-side rendering, and Chakra UI, a popular UI component library.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- User-friendly search interface to find real estate listings
+- Integration with the Bayut API to fetch and display real-time data
+- Responsive design for optimal viewing on various devices
+- Pagination and filtering options to refine search results
+- Detailed property information including descriptions, images, and contact details
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Installation
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Clone the repository: `git clone https://github.com/sachintom999/NextJS-real-estate`
+2. Change into the project directory: `cd NextJS-real-estate`
+3. Install dependencies: `npm install`
 
-## Learn More
+## Configuration
 
-To learn more about Next.js, take a look at the following resources:
+Before running the application, you need to obtain an API key from RapidAPI for the Bayut API. Follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Visit the [Bayut API](https://rapidapi.com/apidojo/api/bayut) on RapidAPI.
+2. Sign up for an account or log in if you already have one.
+3. Subscribe to the Bayut API and obtain your API key.
+4. In the project directory, create a `.env.local` file.
+5. Add the following line to the `.env.local` file, replacing `RAPID_API_KEY` with your actual API key:
